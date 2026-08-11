@@ -1,0 +1,449 @@
+
+
+:root {
+  
+  --primary-navy: #1d2a3a;       
+  --accent-sage: #5c928f;        
+  --soft-mint: #a1c4bc;        
+  
+  --bg-warm-white: #f8f7f4;     
+  --card-bg: #ffffff;            
+  --text-dark: #1d2a3a;         
+  --text-muted: #5e6d7e;        
+  
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 18px rgba(29, 42, 58, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--bg-warm-white);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+
+ 
+
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0.8rem 5%;
+    background:#fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+
+.logo a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+}
+
+
+.logoImg{
+    height: 100px;
+    width:auto;
+    display:block;
+}
+
+
+.logo h2{
+    margin:0;
+    margin-left: -60PX;
+    font-family:"Cormorant Garamond", serif;
+    font-size:1.8rem;
+    font-weight:700;
+    line-height:1;
+    color:#1d2a3a;      
+}
+
+
+.logo h2 span{
+    font-family:"Cormorant Garamond", serif; 
+    font-weight:700;
+    color:#76b7bb;      
+}
+
+/* Menú de navegación */
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  font-weight: 600;
+  color: var(--primary-navy);
+  transition: var(--transition);
+  font-size: 0.95rem;
+  text-decoration: none;
+  white-space: nowrap; 
+}
+
+nav a:hover {
+  color: var(--accent-sage);
+}
+
+.btnRegistro {
+  background-color: var(--primary-navy);
+  color: #ffffff ;
+  padding: 0.6rem 1.4rem;
+  border-radius: 25px;
+  transition: var(--transition, all 0.3s ease);
+}
+
+.btnRegistro:hover {
+  background-color: var(--accent-sage);
+  transform: translateY(-2px);
+}
+/* ==========================================
+   BANNERS Y HERO SECTIONS
+   ========================================== */
+.hero {
+  background: linear-gradient(135deg, rgba(29, 42, 58, 0.92), rgba(92, 146, 143, 0.88)), url('../img/hero-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 6.5rem 5%;
+  text-align: center;
+}
+
+.heroContenido {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroContenido h1 {
+  font-size: 3.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.heroContenido h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+  color: var(--soft-mint);
+}
+
+.heroContenido p {
+  font-size: 1.1rem;
+  margin-bottom: 2.2rem;
+  opacity: 0.95;
+}
+
+.bannerPagina {
+  background: linear-gradient(135deg, var(--primary-navy), var(--accent-sage));
+  color: white;
+  text-align: center;
+  padding: 4.5rem 5%;
+}
+
+.bannerPagina h1 {
+  font-size: 2.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.bannerPagina p {
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+  opacity: 0.9;
+}
+
+/* BOTONES GLOBALES */
+.botonHero, .botonCTA, .botonApp {
+  display: inline-block;
+  background-color: var(--card-bg);
+  color: var(--primary-navy);
+  padding: 0.85rem 2.2rem;
+  font-weight: 700;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.botonHero:hover, .botonCTA:hover, .botonApp:hover {
+  background-color: var(--soft-mint);
+  color: var(--primary-navy);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   SECCIONES GENERALES Y TARJETAS
+   ========================================== */
+section {
+  padding: 4.5rem 5%;
+}
+
+.contenedor {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.2rem;
+  color: var(--primary-navy);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grids */
+.cards, .beneficiosGrid, .gridValores {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.card, .beneficio, .valor, .cardInfo {
+  background-color: var(--card-bg);
+  padding: 2.2rem 1.8rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center;
+  border: 1px solid rgba(161, 196, 188, 0.2);
+  transition: var(--transition);
+}
+
+.card:hover, .beneficio:hover, .valor:hover, .cardInfo:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-sage);
+}
+
+.card i, .beneficio i, .valor i, .cardInfo i {
+  font-size: 2.4rem;
+  color: var(--accent-sage);
+  margin-bottom: 1.2rem;
+}
+
+.card h3, .beneficio h3, .valor h3 {
+  margin-bottom: 0.8rem;
+  color: var(--primary-navy);
+}
+
+/* ==========================================
+   HOSPITALES
+   ========================================== */
+.hospitales {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hospitalCard {
+  background: var(--card-bg);
+  display: flex;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(161, 196, 188, 0.2);
+  transition: var(--transition);
+}
+
+.hospitalCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-sage);
+}
+
+.hospitalCard img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.hospitalInfo {
+  padding: 2rem;
+}
+
+.hospitalInfo h2 {
+  text-align: left;
+  margin-bottom: 0.8rem;
+}
+
+/* ==========================================
+   FORMULARIOS Y CONTACTO
+   ========================================== */
+.contacto, .registroContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contactoInfo .dato {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(161, 196, 188, 0.2);
+}
+
+.contactoInfo i {
+  font-size: 1.8rem;
+  color: var(--accent-sage);
+}
+
+.formulario, .registroFormulario {
+  background-color: var(--card-bg);
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(161, 196, 188, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid #dcdfe3;
+  background-color: #fafbfc;
+  border-radius: 8px;
+  outline: none;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  transition: var(--transition);
+}
+
+form input:focus, form textarea:focus {
+  border-color: var(--accent-sage);
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(92, 146, 143, 0.15);
+}
+
+form button {
+  background-color: var(--primary-navy);
+  color: white;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+form button:hover {
+  background-color: var(--accent-sage);
+}
+
+/* ==========================================
+   PREGUNTAS FRECUENTES (FAQ)
+   ========================================== */
+.faq {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.pregunta {
+  background-color: var(--card-bg);
+  padding: 1.6rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.2rem;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(161, 196, 188, 0.2);
+}
+
+.pregunta h3 {
+  color: var(--primary-navy);
+  margin-bottom: 0.6rem;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+footer {
+  background-color: var(--primary-navy);
+  color: white;
+  text-align: center;
+  padding: 3.5rem 5% 1.8rem;
+  margin-top: 3rem;
+}
+
+.footer h2 {
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.footer p {
+  opacity: 0.85;
+}
+
+.footer .redes {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.8rem 0;
+}
+
+.footer .redes a {
+  color: white;
+  font-size: 1.4rem;
+  transition: var(--transition);
+}
+
+.footer .redes a:hover {
+  color: var(--soft-mint);
+  transform: translateY(-2px);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .hospitalCard {
+    flex-direction: column;
+  }
+
+  .hospitalCard img {
+    width: 100%;
+    height: 220px;
+  }
+}
